@@ -3,7 +3,7 @@
 
 <head>
 
-<link rel="icon" href="logo.png" type="image/png">
+  <link rel="icon" href="logo.png" type="image/png">
 
   <meta charset="UTF-8">
 
@@ -27,13 +27,13 @@
 <body class="bg-grid">
 
   <div
-  class="alerta-topo"
-  id="alerta-topo"
->
+    class="alerta-topo"
+    id="alerta-topo"
+  >
 
-  ⚠️ ALERTA DE TEMPESTADE EM GUARULHOS
+    ⚠️ ALERTA DE TEMPESTADE EM GUARULHOS
 
-</div>
+  </div>
 
   <nav>
 
@@ -51,8 +51,12 @@
         Mapa de Risco
       </a>
 
-    <a href="#alerta">
-  Alertas
+      <a href="#alerta">
+        Alertas
+      </a>
+
+      <a href="#contato">
+  Contato
 </a>
 
     </div>
@@ -86,9 +90,6 @@
             Ver mapa de risco
           </a>
 
-         <a href="#alerta">
-  Alertas
-</a>
         </div>
 
       </div>
@@ -244,22 +245,6 @@
 
       </section>
 
-      <section class="alerta-climatico" id="alerta">
-
-  <div class="alerta-box" id="alerta-box">
-
-    <h3 id="alerta-titulo">
-      Monitoramento climático ativo
-    </h3>
-
-    <p id="alerta-texto">
-      Verificando condições climáticas...
-    </p>
-
-  </div>
-
-</section>
-
       <!-- CLIMA -->
 
       <section class="clima" id="clima">
@@ -310,6 +295,25 @@
 
       </section>
 
+           <!-- ALERTA -->
+
+      <section class="alerta-climatico" id="alerta">
+
+        <div class="alerta-box" id="alerta-box">
+
+          <h3 id="alerta-titulo">
+            Monitoramento climático ativo
+          </h3>
+
+          <p id="alerta-texto">
+            Verificando condições climáticas...
+          </p>
+
+        </div>
+
+      </section>
+
+
       <!-- MAPA -->
 
       <section
@@ -317,7 +321,7 @@
         id="mapa-risco"
       >
 
-        <span class="mini-titulo" id="titulo-mapa">
+        <span class="mini-titulo">
           Monitoramento urbano
         </span>
 
@@ -332,9 +336,164 @@
 
         <div id="mapa-guarulhos"></div>
 
+        <!-- PAINEL -->
+
+        <div class="painel-mapa">
+
+          <h3>Monitoramento em tempo real</h3>
+
+          <div class="painel-item">
+            🌧️ Chuva atual:
+            <span id="chuva-painel">
+              --
+            </span>
+          </div>
+
+          <div class="painel-item">
+            ⚠️ Áreas monitoradas:
+            <span id="areas-painel">
+              0
+            </span>
+          </div>
+
+          <div class="painel-item">
+            🚨 Risco predominante:
+            <span id="risco-painel">
+              --
+            </span>
+          </div>
+
+        </div>
+
+        <!-- LEGENDA -->
+
+        <div class="legenda-mapa">
+
+          <div class="item-legenda">
+
+     <span class="cor extremo"></span>
+
+       Extremo
+
+      </div>
+
+          <div class="item-legenda">
+
+            <span class="cor vermelho"></span>
+
+            Alto risco
+
+          </div>
+
+          <div class="item-legenda">
+
+            <span class="cor laranja"></span>
+
+            Médio risco
+
+          </div>
+
+          <div class="item-legenda">
+
+            <span class="cor verde"></span>
+
+            Baixo risco
+
+          </div>
+
+        </div>
+
       </section>
 
+<section class="contato-section" id="contato">
+
+  <span class="mini-titulo">
+    Fale com a equipe
+  </span>
+
+  <h2>
+    Entre em contato com o GuaruSeguro
+  </h2>
+
+  <p class="descricao">
+    Encontrou algum problema, possui sugestões
+    ou deseja enviar feedback sobre o projeto?
+    Entre em contato conosco.
+  </p>
+
+  <div class="contato-container">
+
+    <div class="contato-info">
+
+      <h3>
+        📍 Informações
+      </h3>
+
+      <p>
+        Projeto escolar desenvolvido para monitoramento climático
+        e prevenção de enchentes em Guarulhos.
+      </p>
+
+      <div class="info-item">
+        📧 sistemasupe2026@gmail.com
+      </div>
+
+      <div class="info-item">
+        📍 Guarulhos - SP
+      </div>
+
+      <div class="info-item">
+        🌧️ Monitoramento climático em tempo real
+      </div>
+
+    </div>
+
+    <div class="contato-formulario">
+
+      <h3>
+        📩 Enviar mensagem
+      </h3>
+
+      <form
+        class="form-contato"
+        action="https://formsubmit.co/sistemasupe2026@gmail.com"
+        method="POST"
+      >
+
+        <input
+          type="text"
+          name="nome"
+          placeholder="Seu nome"
+          required
+        >
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Seu e-mail"
+          required
+        >
+
+        <textarea
+          name="mensagem"
+          placeholder="Digite sua mensagem..."
+          required
+        ></textarea>
+
+        <button type="submit">
+          Enviar mensagem
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
     </main>
+
+    <!-- FOOTER -->
 
     <footer>
 
@@ -378,12 +537,17 @@
   </div>
 
   <!-- Leaflet JS -->
-  <script
-    src="https://unpkg.com/leaflet/dist/leaflet.js">
-  </script>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Heatmap -->
+
+  <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
 
   <!-- JS principal -->
+
   <script src="main.js"></script>
 
 </body>
+
 </html>
