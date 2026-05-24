@@ -1,46 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
-<link rel="icon" href="logo.png" type="image/png">
-
+  <link rel="icon" href="images/logo.png" type="image/png">
   <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>GuaruSeguro</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>SUPE</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- Leaflet CSS -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet/dist/leaflet.css"
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" >
+</head>
+<body class="bg-grid">
+  <div
+    class="alerta-topo"
+    id="alerta-topo"
   >
 
-</head>
+    ⚠️ ALERTA DE TEMPESTADE EM GUARULHOS
 
-<body class="bg-grid">
-
-  <div
-  class="alerta-topo"
-  id="alerta-topo"
->
-
-  ⚠️ ALERTA DE TEMPESTADE EM GUARULHOS
-
-</div>
+  </div>
 
   <nav>
 
-    <div class="logo">
-      <span>GuaruSeguro</span>
-    </div>
+<div class="logo">
 
+  <span class="logo-principal">
+    SUPE
+  </span>
+
+  <span class="logo-secundario">
+    Monitoramento Climático
+  </span>
+
+</div>
     <div class="links">
 
       <a href="#inicio">Início</a>
@@ -51,13 +41,11 @@
         Mapa de Risco
       </a>
 
-    <a href="#alerta">
-  Alertas
+      <a href="#contato">
+  Contato
 </a>
 
     </div>
-
-    <div class="vazio"></div>
 
   </nav>
 
@@ -86,9 +74,10 @@
             Ver mapa de risco
           </a>
 
-         <a href="#alerta">
-  Alertas
-</a>
+          <a href="#contato">
+           Contato
+          </a>
+
         </div>
 
       </div>
@@ -119,7 +108,7 @@
         </h2>
 
         <p class="descricao">
-          O GuaruSeguro reúne informações climáticas,
+          O SUPE reúne informações climáticas,
           alertas preventivos e monitoramento em tempo real
           para ajudar a população de Guarulhos.
         </p>
@@ -184,7 +173,7 @@
           </h2>
 
           <p>
-            O GuaruSeguro é um projeto escolar desenvolvido
+            O SUPE é um projeto escolar desenvolvido
             com o objetivo de unir tecnologia, informação
             climática e prevenção.
           </p>
@@ -244,22 +233,6 @@
 
       </section>
 
-      <section class="alerta-climatico" id="alerta">
-
-  <div class="alerta-box" id="alerta-box">
-
-    <h3 id="alerta-titulo">
-      Monitoramento climático ativo
-    </h3>
-
-    <p id="alerta-texto">
-      Verificando condições climáticas...
-    </p>
-
-  </div>
-
-</section>
-
       <!-- CLIMA -->
 
       <section class="clima" id="clima">
@@ -310,6 +283,25 @@
 
       </section>
 
+           <!-- ALERTA -->
+
+      <section class="alerta-climatico" id="alerta">
+
+        <div class="alerta-box" id="alerta-box">
+
+          <h3 id="alerta-titulo">
+            Monitoramento climático ativo
+          </h3>
+
+          <p id="alerta-texto">
+            Verificando condições climáticas...
+          </p>
+
+        </div>
+
+      </section>
+
+
       <!-- MAPA -->
 
       <section
@@ -317,7 +309,7 @@
         id="mapa-risco"
       >
 
-        <span class="mini-titulo" id="titulo-mapa">
+        <span class="mini-titulo">
           Monitoramento urbano
         </span>
 
@@ -332,9 +324,164 @@
 
         <div id="mapa-guarulhos"></div>
 
+        <!-- PAINEL -->
+
+        <div class="painel-mapa">
+
+          <h3>Monitoramento em tempo real</h3>
+
+          <div class="painel-item">
+            🌧️ Chuva atual:
+            <span id="chuva-painel">
+              --
+            </span>
+          </div>
+
+          <div class="painel-item">
+            ⚠️ Áreas monitoradas:
+            <span id="areas-painel">
+              0
+            </span>
+          </div>
+
+          <div class="painel-item">
+            🚨 Risco predominante:
+            <span id="risco-painel">
+              --
+            </span>
+          </div>
+
+        </div>
+
+        <!-- LEGENDA -->
+
+        <div class="legenda-mapa">
+
+          <div class="item-legenda">
+
+     <span class="cor extremo"></span>
+
+       Extremo
+
+      </div>
+
+          <div class="item-legenda">
+
+            <span class="cor vermelho"></span>
+
+            Alto risco
+
+          </div>
+
+          <div class="item-legenda">
+
+            <span class="cor laranja"></span>
+
+            Médio risco
+
+          </div>
+
+          <div class="item-legenda">
+
+            <span class="cor verde"></span>
+
+            Baixo risco
+
+          </div>
+
+        </div>
+
       </section>
 
+<section class="contato-section" id="contato">
+
+  <span class="mini-titulo">
+    Fale com a equipe
+  </span>
+
+  <h2>
+    Entre em contato com o SUPE
+  </h2>
+
+  <p class="descricao">
+    Encontrou algum problema, possui sugestões
+    ou deseja enviar feedback sobre o projeto?
+    Entre em contato conosco.
+  </p>
+
+  <div class="contato-container">
+
+    <div class="contato-info">
+
+      <h3>
+        📍 Informações
+      </h3>
+
+      <p>
+        Projeto escolar desenvolvido para monitoramento climático
+        e prevenção de enchentes em Guarulhos.
+      </p>
+
+      <div class="info-item">
+        📧 sistemasupe2026@gmail.com
+      </div>
+
+      <div class="info-item">
+        📍 Guarulhos - SP
+      </div>
+
+      <div class="info-item">
+        🌧️ Monitoramento climático em tempo real
+      </div>
+
+    </div>
+
+    <div class="contato-formulario">
+
+      <h3>
+        📩 Enviar mensagem
+      </h3>
+
+      <form
+        class="form-contato"
+        action="https://formsubmit.co/sistemasupe2026@gmail.com"
+        method="POST"
+      >
+
+        <input
+          type="text"
+          name="nome"
+          placeholder="Seu nome"
+          required
+        >
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Seu e-mail"
+          required
+        >
+
+        <textarea
+          name="mensagem"
+          placeholder="Digite sua mensagem..."
+          required
+        ></textarea>
+
+        <button type="submit">
+          Enviar mensagem
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
     </main>
+
+    <!-- FOOTER -->
 
     <footer>
 
@@ -342,7 +489,9 @@
 
         <div class="footer-info">
 
-          <h2>GuaruSeguro</h2>
+          <h2>
+            SUPE
+          </h2>
 
           <p>
             Projeto escolar voltado ao monitoramento climático
@@ -368,7 +517,7 @@
       <div class="footer-bottom">
 
         <p>
-          © 2026 GuaruSeguro • Projeto escolar
+          © 2026 SUPE • Projeto escolar
         </p>
 
       </div>
@@ -378,12 +527,17 @@
   </div>
 
   <!-- Leaflet JS -->
-  <script
-    src="https://unpkg.com/leaflet/dist/leaflet.js">
-  </script>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Heatmap -->
+
+  <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
 
   <!-- JS principal -->
+
   <script src="main.js"></script>
 
 </body>
+
 </html>
