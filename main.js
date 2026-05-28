@@ -42,163 +42,435 @@ opacity: 0.45
 const bairros = [
 
 {
-nome: "Vila Augusta",
-coords: [-23.4708, -46.5380],
-vulnerabilidade: 8,
-historico: 8,
-drenagem: 5
-},
-
-{
-nome: "Jardim Maia",
-coords: [-23.4525, -46.5335],
-vulnerabilidade: 5,
-historico: 5,
-drenagem: 6
-},
-
-{
-nome: "Picanço",
-coords: [-23.4450, -46.5470],
-vulnerabilidade: 7,
-historico: 7,
-drenagem: 5
-},
-
-{
-nome: "Vila Galvão",
-coords: [-23.4442, -46.5488],
-vulnerabilidade: 7,
-historico: 7,
-drenagem: 4
-},
-
-{
-nome: "Macedo",
-coords: [-23.4660, -46.5315],
-vulnerabilidade: 5,
-historico: 5,
-drenagem: 5
-},
-
-{
 nome: "Centro",
-coords: [-23.4628, -46.5333],
-vulnerabilidade: 7,
-historico: 7,
-drenagem: 4
-},
-
-{
-nome: "Ponte Grande",
-coords: [-23.4850, -46.5450],
-vulnerabilidade: 10,
-historico: 10,
-drenagem: 3
-},
-
-{
-nome: "Parque Cecap",
-coords: [-23.4865, -46.5005],
-vulnerabilidade: 8,
-historico: 8,
-drenagem: 4
-},
-
-{
-nome: "Vila Rosália",
-coords: [-23.4520, -46.5610],
+coords: [-23.468, -46.528],
 vulnerabilidade: 3,
-historico: 3,
+historico: 6,
 drenagem: 7
 },
 
 {
-nome: "Gopoúva",
-coords: [-23.4755, -46.5455],
-vulnerabilidade: 5,
-historico: 6,
-drenagem: 5
-},
-
-{
-nome: "Jardim Flor da Montanha",
-coords: [-23.4485, -46.5340],
-vulnerabilidade: 5,
-historico: 5,
-drenagem: 5
-},
-
-{
-nome: "Torres Tibagy",
-coords: [-23.4555, -46.5485],
-vulnerabilidade: 5,
+nome: "Macedo",
+coords: [-23.458, -46.518],
+vulnerabilidade: 2,
 historico: 4,
 drenagem: 5
 },
 
 {
-nome: "Jardim Tranquilidade",
-coords: [-23.4820, -46.5405],
-vulnerabilidade: 7,
-historico: 7,
-drenagem: 4
-},
-
-{
-nome: "Jardim Guaracy",
-coords: [-23.4690, -46.5150],
-vulnerabilidade: 10,
-historico: 10,
-drenagem: 2
-},
-
-{
-nome: "Jardim Paulista",
-coords: [-23.4705, -46.5205],
+nome: "Bom Clima",
+coords: [-23.447, -46.519],
 vulnerabilidade: 2,
-historico: 2,
+historico: 4,
+drenagem: 5
+},
+
+{
+nome: "Gopoúva",
+coords: [-23.468, -46.541],
+vulnerabilidade: 3,
+historico: 5,
+drenagem: 6
+},
+
+{
+nome: "Vila Augusta",
+coords: [-23.477, -46.543],
+vulnerabilidade: 3,
+historico: 5,
+drenagem: 6
+},
+
+{
+nome: "Torres Tibagy",
+coords: [-23.456, -46.550],
+vulnerabilidade: 4,
+historico: 7,
+drenagem: 7
+},
+
+{
+nome: "Vila Galvão",
+coords: [-23.451, -46.561],
+vulnerabilidade: 4,
+historico: 7,
+drenagem: 7
+},
+
+{
+nome: "Cabuçu",
+coords: [-23.391, -46.548],
+vulnerabilidade: 8,
+historico: 8,
 drenagem: 8
 },
 
 {
-nome: "Vila Barros",
-coords: [-23.4825, -46.5170],
+nome: "Recreio São Jorge",
+coords: [-23.385, -46.545],
 vulnerabilidade: 8,
 historico: 8,
-drenagem: 3
+drenagem: 8
 },
 
 {
-nome: "Bom Clima",
-coords: [-23.4685, -46.5260],
-vulnerabilidade: 5,
+nome: "Jardim Continental",
+coords: [-23.421, -46.552],
+vulnerabilidade: 4,
 historico: 5,
+drenagem: 6
+},
+
+{
+nome: "Parque Continental",
+coords: [-23.420, -46.550],
+vulnerabilidade: 4,
+historico: 5,
+drenagem: 6
+},
+
+{
+nome: "Palmares",
+coords: [-23.383, -46.512],
+vulnerabilidade: 6,
+historico: 6,
+drenagem: 6
+},
+
+{
+nome: "Bananal",
+coords: [-23.381, -46.505],
+vulnerabilidade: 6,
+historico: 6,
+drenagem: 6
+},
+
+{
+nome: "Pimentas",
+coords: [-23.448, -46.417],
+vulnerabilidade: 8,
+historico: 8,
+drenagem: 8
+},
+
+{
+nome: "Jardim Maria Dirce",
+coords: [-23.450, -46.425],
+vulnerabilidade: 8,
+historico: 8,
+drenagem: 8
+},
+
+{
+nome: "Jardim Centenário",
+coords: [-23.451, -46.410],
+vulnerabilidade: 8,
+historico: 8,
+drenagem: 8
+},
+
+{
+nome: "Cumbica",
+coords: [-23.442, -46.467],
+vulnerabilidade: 8,
+historico: 9,
+drenagem: 9
+},
+
+{
+nome: "Jardim Nova Cumbica",
+coords: [-23.445, -46.455],
+vulnerabilidade: 8,
+historico: 9,
+drenagem: 9
+},
+
+{
+nome: "Bonsucesso",
+coords: [-23.416, -46.411],
+vulnerabilidade: 6,
+historico: 7,
+drenagem: 7
+},
+
+{
+nome: "Água Chata",
+coords: [-23.435, -46.402],
+vulnerabilidade: 6,
+historico: 7,
+drenagem: 7
+},
+
+{
+nome: "Vila Any",
+coords: [-23.488, -46.428],
+vulnerabilidade: 9,
+historico: 10,
+drenagem: 10
+},
+
+{
+nome: "Jardim Pantanal",
+coords: [-23.491, -46.418],
+vulnerabilidade: 9,
+historico: 10,
+drenagem: 10
+},
+
+{
+nome: "Novo Recreio",
+coords: [-23.401, -46.540],
+vulnerabilidade: 9,
+historico: 10,
+drenagem: 10
+},
+
+{
+nome: "Cidade Soberana",
+coords: [-23.400, -46.455],
+vulnerabilidade: 6,
+historico: 7,
+drenagem: 7
+},
+
+{
+nome: "Cidade Seródio",
+coords: [-23.408, -46.461],
+vulnerabilidade: 6,
+historico: 7,
+drenagem: 7
+},
+
+{
+nome: "Jardim São João",
+coords: [-23.395, -46.463],
+vulnerabilidade: 5,
+historico: 6,
+drenagem: 6
+},
+
+{
+nome: "Lavras",
+coords: [-23.382, -46.438],
+vulnerabilidade: 6,
+historico: 5,
+drenagem: 6
+},
+
+{
+nome: "Taboão",
+coords: [-23.435, -46.495],
+vulnerabilidade: 5,
+historico: 7,
+drenagem: 7
+},
+
+{
+nome: "Parque Cecap",
+coords: [-23.442, -46.505],
+vulnerabilidade: 3,
+historico: 4,
+drenagem: 5
+},
+
+{
+nome: "Itapegica",
+coords: [-23.483, -46.539],
+vulnerabilidade: 5,
+historico: 8,
+drenagem: 7
+},
+
+{
+nome: "Ponte Grande",
+coords: [-23.496, -46.545],
+vulnerabilidade: 4,
+historico: 7,
+drenagem: 7
+},
+
+{
+nome: "Porto da Igreja",
+coords: [-23.485, -46.525],
+vulnerabilidade: 5,
+historico: 8,
+drenagem: 8
+},
+
+{
+nome: "Picanço",
+coords: [-23.445, -46.540],
+vulnerabilidade: 2,
+historico: 4,
+drenagem: 5
+},
+
+{
+nome: "Jardim Paraventi",
+coords: [-23.445, -46.522],
+vulnerabilidade: 2,
+historico: 4,
+drenagem: 5
+},
+
+{
+nome: "Jardim Maia",
+coords: [-23.455, -46.520],
+vulnerabilidade: 2,
+historico: 4,
+drenagem: 5
+},
+
+{
+nome: "Vila Rio de Janeiro",
+coords: [-23.435, -46.538],
+vulnerabilidade: 4,
+historico: 5,
+drenagem: 6
+},
+
+{
+nome: "Jardim Bela Vista",
+coords: [-23.432, -46.518],
+vulnerabilidade: 2,
+historico: 4,
 drenagem: 5
 },
 
 {
 nome: "Jardim Presidente Dutra",
-coords: [-23.4405, -46.4305],
+coords: [-23.415, -46.455],
+vulnerabilidade: 6,
+historico: 7,
+drenagem: 7
+},
+
+{
+nome: "Itaim",
+coords: [-23.495, -46.402],
 vulnerabilidade: 8,
+historico: 9,
+drenagem: 9
+},
+
+{
+nome: "Várzea do Palácio",
+coords: [-23.465, -46.495],
+vulnerabilidade: 6,
 historico: 8,
+drenagem: 8
+},
+
+{
+nome: "Vila Barros",
+coords: [-23.445, -46.510],
+vulnerabilidade: 4,
+historico: 6,
+drenagem: 6
+},
+
+{
+nome: "Vila Fátima",
+coords: [-23.450, -46.501],
+vulnerabilidade: 4,
+historico: 5,
+drenagem: 6
+},
+
+{
+nome: "Inocoop",
+coords: [-23.410, -46.440],
+vulnerabilidade: 4,
+historico: 5,
+drenagem: 6
+},
+
+{
+nome: "Aracília",
+coords: [-23.430, -46.388],
+vulnerabilidade: 7,
+historico: 8,
+drenagem: 8
+},
+
+{
+nome: "Vila Carmela",
+coords: [-23.415, -46.425],
+vulnerabilidade: 5,
+historico: 6,
+drenagem: 6
+},
+
+{
+nome: "Haroldo Veloso",
+coords: [-23.405, -46.450],
+vulnerabilidade: 6,
+historico: 7,
+drenagem: 7
+},
+
+{
+nome: "Vila Tranquilidade",
+coords: [-23.468, -46.551],
+vulnerabilidade: 3,
+historico: 5,
+drenagem: 6
+},
+
+{
+nome: "Vila São Rafael",
+coords: [-23.485, -46.555],
+vulnerabilidade: 4,
+historico: 7,
+drenagem: 7
+},
+
+{
+nome: "Vila das Palmeiras",
+coords: [-23.475, -46.515],
+vulnerabilidade: 4,
+historico: 6,
+drenagem: 6
+},
+
+{
+nome: "Mato Dentro",
+coords: [-23.360, -46.565],
+vulnerabilidade: 5,
+historico: 3,
 drenagem: 4
 },
 
 {
-nome: "Cumbica",
-coords: [-23.4550, -46.4800],
-vulnerabilidade: 10,
-historico: 10,
-drenagem: 2
+nome: "Água Azul",
+coords: [-23.345, -46.445],
+vulnerabilidade: 6,
+historico: 4,
+drenagem: 4
 },
 
 {
-nome: "Pimentas",
-coords: [-23.4727, -46.4167],
-vulnerabilidade: 10,
-historico: 10,
-drenagem: 2
+nome: "Morro Grande",
+coords: [-23.325, -46.485],
+vulnerabilidade: 5,
+historico: 3,
+drenagem: 4
+},
+
+{
+nome: "Morungaba",
+coords: [-23.335, -46.555],
+vulnerabilidade: 5,
+historico: 3,
+drenagem: 4
+},
+
+{
+nome: "Capelinha",
+coords: [-23.355, -46.475],
+vulnerabilidade: 5,
+historico: 3,
+drenagem: 4
 }
 
 ];
@@ -216,17 +488,110 @@ fetch(climaAtualURL)
 const temperatura =
 Math.round(data.main.temp);
 
+const sensacao =
+Math.round(data.main.feels_like);
+
+const umidade =
+data.main.humidity;
+
+const vento =
+Math.round(data.wind.speed * 3.6);
+
 const descricao =
 data.weather[0].description;
 
 const clima =
 data.weather[0].main.toLowerCase();
 
+// ==========================
+// EMOJIS
+// ==========================
+
+let emoji = "☁️";
+
+if (clima.includes("clear")) {
+
+emoji = "☀️";
+
+}
+
+else if (clima.includes("cloud")) {
+
+emoji = "☁️";
+
+}
+
+else if (clima.includes("rain")) {
+
+emoji = "🌧️";
+
+}
+
+else if (clima.includes("drizzle")) {
+
+emoji = "🌦️";
+
+}
+
+else if (clima.includes("thunderstorm")) {
+
+emoji = "⛈️";
+
+}
+
+else if (clima.includes("snow")) {
+
+emoji = "❄️";
+
+}
+
+else if (clima.includes("mist")) {
+
+emoji = "🌫️";
+
+}
+
+// emoji separado
+document.getElementById("emoji-clima")
+.innerHTML = emoji;
+
+// temperatura
 document.getElementById("temperatura")
 .innerHTML = `${temperatura}°C`;
 
+// descrição
 document.getElementById("descricao-clima")
 .innerHTML = descricao;
+
+// criar infos extras
+document.getElementById("info-clima")
+.innerHTML = `
+
+<div class="info-item-clima">
+
+<span>Umidade do Ar</span>
+
+<strong>${umidade}%</strong>
+
+</div>
+
+<div class="info-item-clima">
+
+<span>Velocidade do Vento</span>
+
+<strong>${vento} km/h</strong>
+
+</div>
+
+<div class="info-item-clima">
+
+<span>Sensação Térmica</span>
+
+<strong>${sensacao}°C</strong>
+
+</div>
+
+`;
 
 const alertaBox =
 document.getElementById("alerta-box");
@@ -281,27 +646,37 @@ alertaTexto.innerHTML =
 const chuvaAtual =
 data.rain?.["1h"] || 0;
 
+
+
 // ==========================
 // CALCULAR RISCO
 // ==========================
 
 bairros.forEach(bairro => {
 
-const baseRisco =
+let impactoChuva = 0;
 
-(
-bairro.vulnerabilidade * 0.45 +
-bairro.historico * 0.35 +
+// ==========================
+// BASE DO RISCO
+// ==========================
+
+const baseRisco = (
+
+bairro.vulnerabilidade * 0.40 +
+bairro.historico * 0.30 +
 (10 - bairro.drenagem) * 0.20
+
 ) / 10;
 
-let impactoChuva = 0;
+// ==========================
+// IMPACTO DA CHUVA
+// ==========================
 
 // chuva leve
 if (chuvaAtual >= 1 && chuvaAtual < 5) {
 
 impactoChuva =
-bairro.vulnerabilidade * 0.008;
+bairro.vulnerabilidade * 0.010;
 
 }
 
@@ -309,7 +684,7 @@ bairro.vulnerabilidade * 0.008;
 else if (chuvaAtual >= 5 && chuvaAtual < 15) {
 
 impactoChuva =
-bairro.vulnerabilidade * 0.015;
+bairro.vulnerabilidade * 0.025;
 
 }
 
@@ -317,7 +692,7 @@ bairro.vulnerabilidade * 0.015;
 else if (chuvaAtual >= 15 && chuvaAtual < 30) {
 
 impactoChuva =
-bairro.vulnerabilidade * 0.025;
+bairro.vulnerabilidade * 0.045;
 
 }
 
@@ -325,17 +700,22 @@ bairro.vulnerabilidade * 0.025;
 else if (chuvaAtual >= 30) {
 
 impactoChuva =
-bairro.vulnerabilidade * 0.04;
+bairro.vulnerabilidade * 0.070;
 
 }
+
+// ==========================
+// RISCO FINAL
+// ==========================
 
 bairro.risco =
 Math.min(baseRisco + impactoChuva, 1);
 
-// sem chuva NÃO pode existir extremo
-if (chuvaAtual < 1 && bairro.risco > 0.84) {
 
-bairro.risco = 0.84;
+// sem chuva não deixa EXTREMO
+if (chuvaAtual < 1 && bairro.risco > 0.80) {
+
+bairro.risco = 0.80;
 
 }
 
@@ -356,19 +736,19 @@ Math.max(...bairros.map(b => b.risco));
 
 let riscoPredominante = "Baixo";
 
-if (maiorRisco >= 0.9) {
+if (maiorRisco >= 0.75) {
 
 riscoPredominante = "Extremo";
 
 }
 
-else if (maiorRisco >= 0.7) {
+else if (maiorRisco >= 0.55) {
 
 riscoPredominante = "Alto";
 
 }
 
-else if (maiorRisco >= 0.45) {
+else if (maiorRisco >= 0.35) {
 
 riscoPredominante = "Médio";
 
@@ -376,6 +756,8 @@ riscoPredominante = "Médio";
 
 document.getElementById("risco-painel")
 .innerHTML = riscoPredominante;
+
+console.log("Maior risco:", maiorRisco);
 
 // ==========================
 // HEATMAP
@@ -406,27 +788,23 @@ gradient: {
 
 }).addTo(mapa);
 
-// ==========================
-// MARCADORES
-// ==========================
-
 bairros.forEach(bairro => {
 
 let nivel = "Baixo";
 
-if (bairro.risco >= 0.9) {
+if (bairro.risco >= 0.75) {
 
 nivel = "Extremo";
 
 }
 
-else if (bairro.risco >= 0.7) {
+else if (bairro.risco >= 0.55) {
 
 nivel = "Alto";
 
 }
 
-else if (bairro.risco >= 0.45) {
+else if (bairro.risco >= 0.35) {
 
 nivel = "Médio";
 
@@ -468,6 +846,11 @@ fillOpacity: 1
 <p>
 Nível de risco:
 <strong>${nivel}</strong>
+</p>
+
+<p>
+Risco numérico:
+${bairro.risco.toFixed(2)}
 </p>
 
 <p>
@@ -558,6 +941,12 @@ nomesDias[dataObj.getDay()];
 const temperatura =
 Math.round(item.main.temp);
 
+const sensacao =
+Math.round(item.main.feels_like);
+
+const umidade =
+item.main.humidity;
+
 const descricao =
 item.weather[0].description;
 
@@ -573,6 +962,13 @@ ${temperatura}°C
 
 <p>${descricao}</p>
 
+<div class="extra-info">
+
+💧 Umidade: ${umidade}%<br>
+
+🌡️ Sensação: ${sensacao}°C
+
+</div>
 </div>
 
 `;
