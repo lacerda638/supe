@@ -500,8 +500,51 @@ Math.round(data.wind.speed * 3.6);
 const descricao =
 data.weather[0].description;
 
+document.getElementById("clima-painel")
+.innerHTML = descricao;
+
 const clima =
 data.weather[0].main.toLowerCase();
+
+// ==========================
+// DATA ATUAL
+// ==========================
+
+const hoje = new Date();
+
+const diasSemana = [
+  "domingo",
+  "segunda-feira",
+  "terça-feira",
+  "quarta-feira",
+  "quinta-feira",
+  "sexta-feira",
+  "sábado"
+];
+
+const meses = [
+  "janeiro",
+  "fevereiro",
+  "março",
+  "abril",
+  "maio",
+  "junho",
+  "julho",
+  "agosto",
+  "setembro",
+  "outubro",
+  "novembro",
+  "dezembro"
+];
+
+const dataFormatada =
+
+`${diasSemana[hoje.getDay()]},
+${hoje.getDate()} de
+${meses[hoje.getMonth()]}`;
+
+document.getElementById("data-clima")
+.innerHTML = dataFormatada;
 
 // ==========================
 // EMOJIS
@@ -639,6 +682,11 @@ alertaTexto.innerHTML =
 
 }
 
+document.getElementById("clima-painel")
+.innerHTML = descricao;
+
+document.getElementById("descricao-clima")
+.innerHTML = descricao;
 // ==========================
 // CHUVA
 // ==========================
@@ -754,10 +802,63 @@ riscoPredominante = "Médio";
 
 }
 
-document.getElementById("risco-painel")
-.innerHTML = riscoPredominante;
+const riscoPainel =
+document.getElementById("risco-painel");
+
+riscoPainel.innerHTML =
+riscoPredominante;
+
+riscoPainel.className = "";
+
+if (riscoPredominante === "Extremo") {
+
+  riscoPainel.classList.add("risco-extremo");
+
+}
+
+else if (riscoPredominante === "Alto") {
+
+  riscoPainel.classList.add("risco-alto");
+
+}
+
+else if (riscoPredominante === "Médio") {
+
+  riscoPainel.classList.add("risco-medio");
+
+}
+
+else {
+
+  riscoPainel.classList.add("risco-baixo");
+
+}
 
 console.log("Maior risco:", maiorRisco);
+
+const statusSistema =
+document.getElementById("status-sistema");
+
+if (riscoPredominante === "Extremo") {
+
+statusSistema.innerHTML =
+"🔴 Risco extremo detectado.";
+
+}
+
+else if (riscoPredominante === "Alto") {
+
+statusSistema.innerHTML =
+"🟠 Áreas em atenção.";
+
+}
+
+else {
+
+statusSistema.innerHTML =
+"🟢 Monitoramento ativo.";
+
+}
 
 // ==========================
 // HEATMAP

@@ -182,57 +182,56 @@
 
       </section>
 
-      <!-- OBJETIVOS -->
+<!-- OBJETIVOS -->
 
-      <section
-        class="objetivos"
-        id="objetivos"
-      >
+<section
+  class="objetivos"
+  id="objetivos"
+>
 
-        <span class="mini-titulo">
-          Objetivos
-        </span>
+  <span class="mini-titulo">
+    Objetivos
+  </span>
 
-        <h2>
-          Como o GuaruSeguro busca ajudar a população
-        </h2>
+  <h2>
+    Como o SUPE busca ajudar a população
+  </h2>
 
-        <div class="objetivos-cards">
+  <div class="objetivos-cards">
 
-          <div class="objetivo-card">
+ <div class="objetivo-card">
 
-            <h3>Prevenção</h3>
+  <h3>Prevenção</h3>
 
-            <p>
-              Informar sobre riscos climáticos e enchentes.
-            </p>
+  <p>
+    Alertas e informações sobre riscos climáticos.
+  </p>
 
-          </div>
+</div>
 
-          <div class="objetivo-card">
+<div class="objetivo-card">
 
-            <h3>Monitoramento</h3>
+  <h3>Monitoramento</h3>
 
-            <p>
-              Acompanhar condições climáticas em tempo real.
-            </p>
+  <p>
+    Dados climáticos e mapas em tempo real.
+  </p>
 
-          </div>
+</div>
 
-          <div class="objetivo-card">
+<div class="objetivo-card">
 
-            <h3>Conscientização</h3>
+  <h3>Protótipo Físico</h3>
 
-            <p>
-              Incentivar segurança e preparação urbana.
-            </p>
+  <p>
+    Maquete com pisos permeáveis.
+  </p>
 
-          </div>
+</div>
 
-        </div>
+  </div>
 
-      </section>
-
+</section>
       <!-- CLIMA -->
 
       <section class="clima" id="clima">
@@ -249,23 +248,21 @@
 
   <h2>Guarulhos, SP</h2>
 
-  <p class="data-clima">
-    quinta-feira, 28 de maio
-  </p>
+<p
+  class="data-clima"
+  id="data-clima"
+>
+</p>
 
   <span
     class="emoji-clima"
     id="emoji-clima"
-  >
-    ☁️
-  </span>
+  ></span>
 
   <div id="temperatura">
-    21°C
   </div>
 
   <div id="descricao-clima">
-    Algumas nuvens
   </div>
 
   <div class="linha-clima"></div>
@@ -340,36 +337,96 @@
           pontos críticos de alagamento em Guarulhos.
         </p>
 
-        <div id="mapa-guarulhos"></div>
+<div class="mapa-wrapper">
+
+  <div id="mapa-guarulhos"></div>
+
+</div>
 
         <!-- PAINEL -->
 
-        <div class="painel-mapa">
+<!-- PAINEL SUPERVISOR -->
 
-          <h3>Monitoramento em tempo real</h3>
+<div class="painel-supervisor">
 
-          <div class="painel-item">
-            🌧️ Chuva atual:
-            <span id="chuva-painel">
-              --
-            </span>
-          </div>
+  <div class="painel-header">
 
-          <div class="painel-item">
-            ⚠️ Áreas monitoradas:
-            <span id="areas-painel">
-              0
-            </span>
-          </div>
+    <h3>Painel Supervisor</h3>
 
-          <div class="painel-item">
-            🚨 Risco predominante:
-            <span id="risco-painel">
-              --
-            </span>
-          </div>
+  </div>
 
-        </div>
+  <div class="painel-grid">
+
+    <!-- STATUS -->
+
+    <div class="painel-card status-card">
+
+      <span class="painel-label">
+        STATUS DO SISTEMA
+      </span>
+
+      <h4 id="status-sistema">
+      </h4>
+
+    </div>
+
+    <!-- BAIRROS -->
+
+    <div class="painel-card">
+
+      <span class="painel-label">
+        BAIRROS MONITORADOS
+      </span>
+
+      <h2 id="areas-painel"></h2>
+
+    </div>
+
+    <!-- CLIMA -->
+
+    <div class="painel-card">
+
+      <span class="painel-label">
+        CLIMA ATUAL LOCAL
+      </span>
+
+      <h2 id="clima-painel">
+      </h2>
+
+    </div>
+
+    <!-- CHUVA -->
+
+    <div class="painel-card">
+
+      <span class="painel-label">
+        VOLUME PLUVIOMÉTRICO (EST.)
+      </span>
+
+      <h2 id="chuva-painel">
+      </h2>
+
+    </div>
+
+    <!-- RISCO -->
+
+    <div class="painel-card">
+
+      <span class="painel-label">
+        PERIGO PREDOMINANTE
+      </span>
+
+      <h2
+        id="risco-painel"
+        class="risco-extremo"
+      >
+      </h2>
+
+    </div>
+
+  </div>
+
+</div>
 
         <!-- LEGENDA -->
 
