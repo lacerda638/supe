@@ -1,0 +1,2565 @@
+:root {
+
+  --cor-fundo: #e6f7ff;
+
+  --cor-primaria: #7dd3fc;
+
+  --cor-primaria-hover: #38bdf8;
+
+  --cor-secundaria: #2c3e50;
+
+  --cor-card: rgba(255,255,255,0.75);
+
+  --cor-borda: rgba(125, 211, 252, 0.35);
+
+  --cor-texto: #2c3e50;
+
+  --cor-texto-suave: #555;
+
+  --sombra: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+* {
+
+  box-sizing: border-box;
+}
+
+html {
+
+  scroll-behavior: smooth;
+}
+
+body {
+
+  background-color: var(--cor-fundo);
+
+  margin: 0;
+
+  font-family: Arial, sans-serif;
+
+  color: var(--cor-texto);
+}
+
+section {
+
+  scroll-margin-top: 140px;
+}
+
+/* ========================= */
+/* ALERTA TOPO */
+/* ========================= */
+
+.alerta-topo {
+
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  background-color: #c0392b;
+
+  color: white;
+
+  text-align: center;
+
+  padding: 20px;
+
+  font-weight: bold;
+
+  z-index: 9999;
+
+  display: none;
+
+  animation: piscar 1s infinite;
+}
+
+@keyframes piscar {
+
+  0% {
+
+    background-color: #c0392b;
+  }
+
+  50% {
+
+    background-color: #e74c3c;
+  }
+
+  100% {
+
+    background-color: #c0392b;
+  }
+}
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+
+
+.logo-principal {
+
+  font-size: 30px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  color: #2c3e50;
+}
+
+.logo-secundario {
+
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+  color: #64748b;
+
+  margin-top: 4px;
+}
+
+nav {
+
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  padding: 18px 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  background-color: rgba(255,255,255,0.75);
+
+  backdrop-filter: blur(14px);
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+
+  z-index: 999;
+}
+
+/* LOGO */
+
+.logo {
+
+  display: flex;
+
+  flex-direction: column;
+
+  line-height: 1;
+}
+
+/* LINKS */
+
+.links {
+
+  display: flex;
+
+  gap: 40px;
+
+  position: absolute;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+nav a {
+
+  text-decoration: none;
+
+  color: #2c3e50;
+
+  font-weight: 700;
+
+  font-size: 17px;
+
+  transition: 0.3s;
+
+  position: relative;
+
+  padding: 8px 0;
+}
+
+/* LINHA ANIMADA */
+
+nav a::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -4px;
+
+  width: 0;
+
+  height: 2px;
+
+  background: #38bdf8;
+
+  transition: 0.3s;
+}
+
+nav a:hover {
+
+  color: #38bdf8;
+}
+
+nav a:hover::after {
+
+  width: 100%;
+}
+
+/* ========================= */
+/* CONTAINER */
+/* ========================= */
+
+.container {
+
+  max-width: 1200px;
+
+  margin: 100px auto;
+
+  padding: 0 20px;
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 50px;
+
+  padding: 120px 0 80px;
+}
+
+.hero-texto {
+
+  flex: 1;
+}
+
+.hero-texto h1 {
+
+  font-size: 60px;
+
+  line-height: 1.1;
+
+  margin-bottom: 20px;
+}
+
+.hero-texto p {
+
+  font-size: 20px;
+
+  color: var(--cor-texto-suave);
+
+  max-width: 500px;
+
+  line-height: 1.6;
+}
+
+.hero-botoes {
+
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 30px;
+}
+
+.hero-botoes a {
+
+  background-color: rgba(255,255,255,0.7);
+
+  color: var(--cor-texto);
+
+  text-decoration: none;
+
+  padding: 12px 20px;
+
+  border-radius: 12px;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+
+  box-shadow: var(--sombra);
+
+  border: 1px solid var(--cor-borda);
+
+  backdrop-filter: blur(10px);
+}
+
+.hero-botoes a:hover {
+
+  transform: translateY(-4px);
+
+  background-color: var(--cor-primaria-hover);
+
+  color: white;
+
+  box-shadow: 0 15px 30px rgba(56, 189, 248, 0.3);
+}
+
+.hero-imagem {
+
+  flex: 1;
+}
+
+.hero-imagem img {
+
+  width: 100%;
+
+  border-radius: 24px;
+
+  display: block;
+
+  box-shadow: var(--sombra);
+}
+
+/* ========================= */
+/* TITULOS */
+/* ========================= */
+
+.mini-titulo {
+
+  color: #4b5563;
+
+  font-weight: bold;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+  font-size: 14px;
+}
+
+h2 {
+
+  font-size: 42px;
+
+  margin-top: 15px;
+
+  color: var(--cor-texto);
+}
+
+.descricao {
+
+  max-width: 620px;
+
+  margin: 18px auto;
+
+  color: #64748b;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+/* ========================= */
+/* SEÇÕES */
+/* ========================= */
+
+.funcionalidades,
+.objetivos,
+.clima,
+.previsao-semana,
+.mapa-risco {
+
+  margin-top: 150px;
+
+  text-align: center;
+}
+
+.sobre {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 60px;
+
+  margin-top: 150px;
+}
+
+.sobre-texto,
+.sobre-imagem {
+
+  flex: 1;
+}
+
+.sobre-imagem img {
+
+  width: 100%;
+
+  height: 400px;
+
+  object-fit: cover;
+
+  border-radius: 24px;
+
+  box-shadow: var(--sombra);
+}
+
+.sobre-texto p {
+
+  line-height: 1.8;
+
+  color: var(--cor-texto-suave);
+}
+
+/* ========================= */
+/* CARDS */
+/* ========================= */
+
+.cards,
+.objetivos-cards,
+.previsao-cards {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 18px;
+
+  flex-wrap: wrap;
+
+  margin-top: 40px;
+}
+
+.card,
+.objetivo-card,
+.previsao-card,
+.clima-card,
+.alerta-box {
+
+background: rgba(255,255,255,0.55);
+
+  backdrop-filter: blur(12px);
+
+  border: 1px solid var(--cor-borda);
+
+  box-shadow: var(--sombra);
+
+  border-radius: 22px;
+
+  transition: 0.3s;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.card,
+.objetivo-card {
+
+  width: 260px;
+
+  padding: 24px 20px;
+
+  border-radius: 20px;
+
+  text-align: left;
+}
+
+.card h3,
+.objetivo-card h3 {
+
+  font-size: 20px;
+
+  margin-bottom: 10px;
+
+  color: #1e293b;
+
+  text-align: center;
+}
+
+.card p,
+.objetivo-card p {
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  color: #64748b;
+
+  text-align: center;
+}
+
+.previsao-card {
+
+  min-width: 140px;
+
+  padding: 30px 20px;
+}
+
+.clima-card {
+
+  max-width: 400px;
+
+  margin: 40px auto;
+
+  padding: 40px;
+}
+
+.alerta-box {
+
+  padding: 30px;
+
+  text-align: center;
+}
+
+.card:hover,
+.objetivo-card:hover,
+.previsao-card:hover,
+.clima-card:hover,
+.alerta-box:hover {
+
+transform: translateY(-4px) scale(1.01);
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.card::before,
+.objetivo-card::before,
+.previsao-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: -100%;
+
+  width: 100%;
+
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.4),
+    transparent
+  );
+
+  transition: 0.8s;
+}
+
+.card:hover::before,
+.objetivo-card:hover::before,
+.previsao-card:hover::before {
+
+  left: 100%;
+}
+
+/* ========================= */
+/* ALERTAS */
+/* ========================= */
+
+.alerta-climatico {
+
+  margin-top: 120px;
+}
+
+.alerta-vermelho {
+
+  background-color: #ffe2e2;
+
+  border: 1px solid #ff4d4d;
+
+  color: #a00000;
+}
+
+.alerta-laranja {
+
+  background-color: #fff4e5;
+
+  border: 1px solid orange;
+
+  color: #9a5700;
+}
+
+/* ========================= */
+/* CLIMA */
+/* ========================= */
+
+#temperatura {
+
+  font-size: 60px;
+
+  color: var(--cor-texto);
+}
+
+.temperatura-dia {
+
+  font-size: 28px;
+
+  font-weight: bold;
+
+  color: var(--cor-texto);
+}
+
+/* ========================= */
+/* MAPA */
+/* ========================= */
+
+.mapa-wrapper {
+
+  position: relative;
+
+  padding: 17px;
+
+  border-radius: 34px;
+
+  background:
+rgba(255,255,255,0.55);
+
+  box-shadow:
+    0 20px 50px rgba(56,189,248,0.18);
+
+  margin-top: 40px;
+}
+
+#mapa-guarulhos {
+
+  height: 500px;
+
+  width: 100%;
+
+  border-radius: 26px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255,255,255,0.4);
+}
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer {
+
+  margin-top: 150px;
+
+  padding: 60px 20px 30px;
+
+  border-top: 1px solid rgba(125, 211, 252, 0.3);
+}
+
+.footer-conteudo {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 30px;
+
+  flex-wrap: wrap;
+}
+
+.footer-info p,
+.footer-bottom p {
+
+  color: var(--cor-texto-suave);
+
+  line-height: 1.6;
+}
+
+.footer-links {
+
+  display: flex;
+
+  gap: 20px;
+}
+
+.footer-links a {
+
+  text-decoration: none;
+
+  color: var(--cor-texto-suave);
+
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+
+  color: var(--cor-primaria-hover);
+}
+
+.footer-bottom {
+
+  margin-top: 40px;
+
+  text-align: center;
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  nav {
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    padding: 15px;
+  }
+
+  .links {
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+  .hero {
+
+    flex-direction: column;
+
+    text-align: center;
+
+    padding-top: 180px;
+  }
+
+  .hero-texto {
+
+    text-align: center;
+  }
+
+  .hero-texto h1 {
+
+    font-size: 42px;
+  }
+
+  .hero-texto p {
+
+    margin: auto;
+  }
+
+  .hero-botoes {
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .hero-botoes a {
+
+    width: 100%;
+
+    max-width: 300px;
+  }
+
+  .sobre {
+
+    flex-direction: column;
+  }
+
+  .cards,
+  .objetivos-cards,
+  .previsao-cards {
+
+    flex-direction: column;
+  }
+
+  .card,
+  .objetivo-card,
+  .previsao-card {
+
+    width: 100%;
+  }
+
+h2 {
+
+  font-size: 38px;
+
+  line-height: 1.2;
+
+  letter-spacing: -1px;
+
+  text-align: center;
+}
+
+  #mapa-guarulhos {
+
+    height: 350px;
+  }
+
+  .footer-conteudo {
+
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .footer-links {
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+  }
+
+  .logo,
+  .vazio {
+
+    width: auto;
+  }
+}
+
+/* ==========================
+LEGENDA MAPA
+========================== */
+
+.legenda-mapa {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 20px;
+
+  margin-top: 25px;
+
+  flex-wrap: wrap;
+}
+
+.item-legenda {
+
+  background: white;
+
+  padding: 12px 18px;
+
+  border-radius: 14px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.cor {
+
+  width: 18px;
+
+  height: 18px;
+
+  border-radius: 50%;
+}
+
+.vermelho {
+
+  background: #ff4d4d;
+}
+
+.laranja {
+
+  background: orange;
+}
+
+.verde {
+
+  background: #2ecc71;
+}
+
+/* ==========================
+POPUP
+========================== */
+
+.popup-risco {
+
+  font-family: Arial, sans-serif;
+}
+
+.popup-risco h3 {
+
+  margin-bottom: 10px;
+
+  color: #2c3e50;
+}
+
+.popup-risco p {
+
+  color: #555;
+
+  margin: 5px 0;
+}
+
+#mapa-guarulhos {
+
+  border: 2px solid rgba(125,211,252,0.4);
+
+  box-shadow:
+    0 0 20px rgba(125,211,252,0.25),
+    0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* =========================
+PAINEL SUPERVISOR
+========================= */
+
+.painel-supervisor {
+
+  margin-top: 30px;
+
+  padding: 32px;
+
+  border-radius: 30px;
+
+  background: rgba(255,255,255,0.55);
+
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(125,211,252,0.25);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.06);
+}
+
+/* HEADER */
+
+.painel-header h3 {
+
+  margin: 0;
+
+  font-size: 34px;
+
+  font-weight: 800;
+
+  color: #1e293b;
+}
+
+.painel-header p {
+
+  margin-top: 8px;
+
+  font-size: 15px;
+
+  color: #64748b;
+}
+
+/* GRID */
+
+.painel-grid {
+
+  margin-top: 28px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.2fr
+    1fr
+    1fr
+    1fr
+    1fr;
+
+  gap: 18px;
+}
+
+/* CARD */
+
+.painel-card {
+
+  background: rgba(255,255,255,0.55);
+
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(125,211,252,0.25);
+
+  border-radius: 24px;
+
+  padding: 22px;
+
+  min-height: 130px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  transition: 0.3s;
+
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.05);
+}
+
+/* HOVER */
+
+.painel-card:hover {
+
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 18px 35px rgba(0,0,0,0.08);
+}
+
+/* STATUS */
+
+.status-card {
+
+  border: 1px solid rgba(16,185,129,0.45);
+
+  background:
+    rgba(16,185,129,0.08);
+}
+
+/* LABEL */
+
+.painel-label {
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 1px;
+
+  color: #64748b;
+
+  margin-bottom: 10px;
+}
+
+/* TITULOS */
+
+.painel-card h2 {
+
+  margin: 0;
+
+  font-size: 40px;
+
+  line-height: 1.1;
+
+  font-weight: 800;
+
+  color: #0f172a;
+}
+
+.painel-card h4 {
+
+  margin: 0;
+
+  font-size: 16px;
+
+  line-height: 1.5;
+
+  color: #0f172a;
+}
+
+/* CORES */
+
+.risco-extremo {
+
+  color: #7c3aed !important;
+}
+
+.risco-alto {
+
+  color: #ef4444 !important;
+}
+
+.risco-medio {
+
+  color: #f59e0b !important;
+}
+
+.risco-baixo {
+
+  color: #10b981 !important;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 1100px) {
+
+  .painel-grid {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .painel-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+  .painel-card h2 {
+
+    font-size: 32px;
+  }
+
+}
+/* =========================
+POPUP MODERNO
+========================= */
+
+.leaflet-popup-content-wrapper {
+
+  border-radius: 18px;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.popup-risco h3 {
+
+  margin-top: 0;
+
+  font-size: 20px;
+
+  color: #2c3e50;
+}
+
+.popup-risco strong {
+
+  color: #38bdf8;
+}
+
+/* =========================
+TOOLTIP
+========================= */
+
+.leaflet-tooltip {
+
+  background: rgba(44,62,80,0.9);
+
+  color: white;
+
+  border: none;
+
+  border-radius: 10px;
+
+  padding: 8px 12px;
+
+  font-size: 13px;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.extremo {
+
+  background: #8b0000;
+}
+
+/* =========================
+SOBRE / CONTATO
+========================= */
+
+.sobre-contato {
+
+  margin-top: 160px;
+
+  text-align: center;
+}
+
+.sobre-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  );
+
+  gap: 25px;
+
+  margin-top: 50px;
+}
+
+.sobre-card {
+
+  background-color: rgba(255,255,255,0.75);
+
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(125,211,252,0.35);
+
+  border-radius: 24px;
+
+  padding: 35px;
+
+  text-align: left;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  transition: 0.3s;
+}
+
+.sobre-card:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.sobre-card h3 {
+
+  margin-top: 0;
+
+  margin-bottom: 20px;
+
+  font-size: 24px;
+
+  color: #2c3e50;
+}
+
+.sobre-card p {
+
+  color: #555;
+
+  line-height: 1.7;
+}
+
+.sobre-card ul {
+
+  padding-left: 20px;
+
+  color: #555;
+
+  line-height: 2;
+}
+
+/* =========================
+FORMULÁRIO
+========================= */
+
+.form-contato {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.form-contato input,
+.form-contato textarea {
+
+  width: 100%;
+
+  padding: 15px;
+
+  border-radius: 14px;
+
+  border: 1px solid rgba(125,211,252,0.35);
+
+  background: rgba(255,255,255,0.7);
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.form-contato textarea {
+
+  min-height: 140px;
+
+  resize: vertical;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+
+  border-color: #38bdf8;
+
+  box-shadow: 0 0 10px rgba(56,189,248,0.2);
+}
+
+.form-contato button {
+
+  background: #38bdf8;
+
+  color: white;
+
+  border: none;
+
+  padding: 15px;
+
+  border-radius: 14px;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.form-contato button:hover {
+
+  background: #0ea5e9;
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+RESPONSIVO
+========================= */
+
+@media (max-width: 768px) {
+
+  .sobre-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+  .sobre-card {
+
+    padding: 25px;
+  }
+
+}
+
+/* =========================
+CONTATO
+========================= */
+
+.contato-section {
+
+  margin-top: 150px;
+
+  text-align: center;
+}
+
+.contato-container {
+
+  display: flex;
+
+  gap: 30px;
+
+  margin-top: 50px;
+
+  align-items: stretch;
+
+  flex-wrap: wrap;
+}
+
+/* CARD ESQUERDO */
+
+.contato-info,
+.contato-formulario {
+
+  flex: 1;
+
+  min-width: 320px;
+
+  background-color: rgba(255,255,255,0.75);
+
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(125, 211, 252, 0.35);
+
+  border-radius: 28px;
+
+  padding: 40px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  text-align: left;
+
+  transition: 0.3s;
+}
+
+.contato-info:hover,
+.contato-formulario:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.contato-info h3,
+.contato-formulario h3 {
+
+  font-size: 28px;
+
+  margin-bottom: 20px;
+
+  color: #2c3e50;
+}
+
+.contato-info p {
+
+  color: #555;
+
+  line-height: 1.8;
+
+  margin-bottom: 25px;
+
+  font-size: 16px;
+}
+
+.info-item {
+
+  background: rgba(125, 211, 252, 0.08);
+
+  border: 1px solid rgba(125, 211, 252, 0.2);
+
+  padding: 15px 18px;
+
+  border-radius: 14px;
+
+  margin-bottom: 15px;
+
+  color: #2c3e50;
+
+  font-weight: 500;
+}
+
+/* FORMULÁRIO */
+
+.form-contato {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.form-contato input,
+.form-contato textarea {
+
+  width: 100%;
+
+  padding: 16px 18px;
+
+  border-radius: 14px;
+
+  border: 1px solid rgba(125, 211, 252, 0.3);
+
+  background: rgba(255,255,255,0.7);
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: 0.3s;
+
+  color: #2c3e50;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+
+  border-color: #38bdf8;
+
+  box-shadow: 0 0 15px rgba(56,189,248,0.2);
+}
+
+.form-contato textarea {
+
+  min-height: 140px;
+
+  resize: vertical;
+}
+
+.form-contato button {
+
+  background: #38bdf8;
+
+  color: white;
+
+  border: none;
+
+  padding: 16px;
+
+  border-radius: 14px;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  box-shadow: 0 10px 20px rgba(56,189,248,0.25);
+}
+
+.form-contato button:hover {
+
+  transform: translateY(-3px);
+
+  background: #0ea5e9;
+
+  box-shadow: 0 15px 30px rgba(56,189,248,0.35);
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+
+  .contato-container {
+
+    flex-direction: column;
+  }
+
+  .contato-info,
+  .contato-formulario {
+
+    width: 100%;
+  }
+
+}
+
+.leaflet-container {
+
+  background: #dbeafe !important;
+
+}
+
+.leaflet-tile {
+
+  filter: brightness(1) !important;
+
+}
+/* =========================
+CLIMA MODERNO
+========================= */
+
+.clima-card {
+
+  max-width: 620px;
+
+  margin: 50px auto;
+
+  padding: 45px;
+
+  border-radius: 32px;
+
+  background: rgba(255,255,255,0.45);
+
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255,255,255,0.4);
+
+  box-shadow:
+    0 10px 40px rgba(0,0,0,0.08);
+
+  text-align: center;
+}
+
+/* CIDADE */
+
+.clima-card h2 {
+
+  font-size: 52px;
+
+  margin-bottom: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: -2px;
+
+  color: #1e293b;
+}
+
+/* DATA */
+
+.data-clima {
+
+  font-size: 20px;
+
+  color: #64748b;
+
+  margin-bottom: 40px;
+
+  font-weight: 500;
+}
+
+/* EMOJI */
+
+.emoji-clima {
+
+  font-size: 85px;
+
+  margin-bottom: 20px;
+
+  display: block;
+}
+
+/* TEMPERATURA */
+
+#temperatura {
+
+  font-size: 100px;
+
+  font-weight: 700;
+
+  line-height: 1;
+
+  margin-bottom: 12px;
+
+  color: #0f172a;
+
+  letter-spacing: -5px;
+}
+
+/* DESCRIÇÃO */
+
+#descricao-clima {
+
+  font-size: 30px;
+
+  font-weight: 600;
+
+  color: #2563eb;
+
+  margin-bottom: 35px;
+
+  text-transform: capitalize;
+}
+
+/* LINHA */
+
+.linha-clima {
+
+  width: 100%;
+
+  height: 1px;
+
+  background: rgba(0,0,0,0.08);
+
+  margin: 30px 0;
+}
+
+/* INFORMAÇÕES */
+
+.info-clima {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 14px;
+}
+
+/* CARD INFO */
+
+.info-item-clima {
+
+  background: rgba(255,255,255,0.35);
+
+  border-radius: 18px;
+
+  padding: 18px 10px;
+
+  transition: 0.3s;
+
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+.info-item-clima:hover {
+
+  transform: translateY(-3px);
+
+  background: rgba(255,255,255,0.55);
+}
+
+/* TITULO INFO */
+
+.info-item-clima span {
+
+  display: block;
+
+  font-size: 13px;
+
+  color: #64748b;
+
+  margin-bottom: 8px;
+
+  font-weight: 600;
+}
+
+/* VALOR INFO */
+
+.info-item-clima strong {
+
+  font-size: 24px;
+
+  color: #0f172a;
+
+  font-weight: 800;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+
+  .clima-card {
+
+    padding: 35px 25px;
+  }
+
+  .clima-card h2 {
+
+    font-size: 38px;
+  }
+
+  #temperatura {
+
+    font-size: 75px;
+  }
+
+  #descricao-clima {
+
+    font-size: 24px;
+  }
+
+  .info-clima {
+
+    grid-template-columns: 1fr;
+  }
+
+}
+
+/* =========================
+PREVISÃO MODERNA
+========================= */
+
+.previsao-cards {
+
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(180px, 1fr)
+  );
+
+  gap: 22px;
+
+  margin-top: 50px;
+}
+
+/* CARD */
+
+.previsao-card {
+
+  background: rgba(255,255,255,0.45);
+
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255,255,255,0.4);
+
+  border-radius: 28px;
+
+  padding: 28px 22px;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.08);
+
+  transition: 0.3s;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+/* brilho suave */
+
+.previsao-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: -100%;
+
+  width: 100%;
+
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.35),
+    transparent
+  );
+
+  transition: 0.8s;
+}
+
+.previsao-card:hover::before {
+
+  left: 100%;
+}
+
+/* hover */
+
+.previsao-card:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* DIA */
+
+.previsao-card h3 {
+
+  font-size: 20px;
+
+  font-weight: 800;
+
+  margin-bottom: 18px;
+
+  color: #1e293b;
+
+  letter-spacing: 1px;
+}
+
+/* TEMPERATURA */
+
+.temperatura-dia {
+
+  font-size: 42px;
+
+  font-weight: 800;
+
+  color: #0f172a;
+
+  margin-bottom: 14px;
+
+  letter-spacing: -2px;
+}
+
+/* DESCRIÇÃO */
+
+.previsao-card p {
+
+  color: #64748b;
+
+  line-height: 1.6;
+
+  margin: 8px 0;
+
+  font-size: 15px;
+}
+
+/* infos extras */
+
+.previsao-card .extra-info {
+
+  margin-top: 18px;
+
+  padding-top: 15px;
+
+  border-top: 1px solid rgba(0,0,0,0.08);
+
+  font-size: 14px;
+
+  color: #475569;
+
+  line-height: 1.8;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+
+  .previsao-cards {
+
+    grid-template-columns: 1fr;
+  }
+
+  .temperatura-dia {
+
+    font-size: 38px;
+  }
+
+}
+
+/* ========================= */
+/* BOTÃO SOS (NAVBAR) */
+/* ========================= */
+
+.btn-sos {
+  background-color: #dc2626;
+  color: #ffffff !important;
+  font-weight: 800;
+  padding: 10px 18px !important;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.4);
+  transition: all 0.3s ease;
+  animation: pulso-sos 2s infinite;
+}
+
+.btn-sos:hover {
+  background-color: #b91c1c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.6);
+}
+
+.btn-sos::after {
+  display: none !important; /* Remove a linha animada padrão do nav */
+}
+
+@keyframes pulso-sos {
+  0% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(220, 38, 38, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+  }
+}
+
+/* ========================= */
+/* SEÇÃO SOS EMERGÊNCIA */
+/* ========================= */
+
+.sos-section {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.sos-card {
+  background: rgba(254, 242, 242, 0.85);
+  backdrop-filter: blur(14px);
+  border: 2px solid #fca5a5;
+  border-radius: 32px;
+  padding: 45px;
+  box-shadow: 0 15px 35px rgba(220, 38, 38, 0.12);
+}
+
+.sos-tag {
+  color: #dc2626;
+}
+
+.sos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 35px;
+  text-align: left;
+}
+
+.sos-coluna {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 20px;
+  border: 1px solid #fee2e2;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.sos-coluna h3 {
+  margin-top: 0;
+  color: #991b1b;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.lista-emergencia {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lista-emergencia li {
+  padding: 12px 0;
+  border-bottom: 1px solid #fecaca;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  color: #1f2937;
+}
+
+.lista-emergencia li:last-child {
+  border-bottom: none;
+}
+
+.lista-emergencia a {
+  background: #dc2626;
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.lista-emergencia a:hover {
+  background: #991b1b;
+}
+
+.lista-fuga {
+  padding-left: 20px;
+  margin: 0;
+  color: #374151;
+  line-height: 1.8;
+}
+
+.lista-fuga li {
+  margin-bottom: 12px;
+}
+
+.lista-fuga a {
+  color: #0284c7;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .sos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.filtros-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.filtros-container span {
+  font-weight: bold;
+  color: #374151;
+}
+
+.btn-filtro {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-filtro:hover {
+  background: #f1f5f9;
+}
+
+.btn-filtro.active {
+  background: #1e293b;
+  color: #ffffff;
+  border-color: #1e293b;
+}
+
+/* Cores específicas quando ativos */
+.btn-extremo.active { background: #8b0000; border-color: #8b0000; }
+.btn-alto.active { background: #ff4d4d; border-color: #ff4d4d; }
+.btn-medio.active { background: #f97316; border-color: #f97316; }
+.btn-baixo.active { background: #2ecc71; border-color: #2ecc71; }
+
+/* ========================================= */
+/* CARD DE SIMULAÇÃO INTEGRADO */
+/* ========================================= */
+
+.simulation-card {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(12px);
+  padding: 24px 28px;
+  border-radius: 24px;
+  box-shadow: var(--sombra);
+  border: 1px solid var(--cor-borda);
+  margin-top: 25px;
+  text-align: left;
+  transition: 0.3s;
+  margin-bottom: 25px;
+}
+
+.simulation-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
+}
+
+.simulation-card h3 {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0 0 6px 0;
+}
+
+.sim-desc {
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* HEADER DO SLIDER */
+
+.slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 10px;
+}
+
+.chuva-badge {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0284c7;
+  background: rgba(56, 189, 248, 0.15);
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+/* INPUT RANGE (SLIDER) */
+
+#slider-chuva {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(203, 213, 225, 0.6);
+  accent-color: #38bdf8;
+  cursor: pointer;
+  margin-bottom: 20px;
+  outline: none;
+  transition: 0.2s;
+}
+
+#slider-chuva:hover {
+  background: rgba(203, 213, 225, 0.9);
+}
+
+/* GRUPO DE BOTÕES DE PRESET */
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-sim {
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--cor-texto);
+  border: 1px solid var(--cor-borda);
+  padding: 8px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.btn-sim:hover {
+  background-color: var(--cor-primaria-hover);
+  color: #ffffff;
+  border-color: var(--cor-primaria-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(56, 189, 248, 0.25);
+}
+
+/* BOTÃO DE RESET */
+
+.btn-sim.btn-reset {
+  background: rgba(241, 245, 249, 0.8);
+  color: #64748b;
+  border-color: #cbd5e1;
+}
+
+.btn-sim.btn-reset:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+  border-color: #94a3b8;
+  box-shadow: none;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px) {
+  .simulation-card {
+    padding: 20px;
+  }
+
+  .btn-group {
+    flex-direction: flex-start;
+  }
+
+  .btn-sim {
+    flex: 1 1 calc(50% - 10px);
+    text-align: center;
+  }
+}
+
+/* Animação das linhas tracejadas das Rotas de Fuga */
+@keyframes dashAnimation {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+
+.rota-fuga-animada {
+  animation: dashAnimation 1s linear infinite;
+}
+
+/* Ícones Customizados no Mapa */
+.custom-marker-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  border: 2px solid #ffffff;
+}
+
+.marker-abrigo {
+  background-color: #2563eb; /* Azul */
+}
+
+.marker-saude {
+  background-color: #dc2626; /* Vermelho */
+}
+
+.marker-resgate {
+  background-color: #ea580c; /* Laranja */
+}
+
+/* Painel de Controle Superior Direito no Mapa */
+.painel-filtros-apoio {
+  background: #ffffff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+.painel-filtros-apoio strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+/* Container de Controles Sobrepostos no Mapa (Canto Superior Direito) */
+.map-controls-panel {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 320px;
+  width: calc(100% - 30px);
+}
+
+/* Estilo Base dos Cards do Painel */
+.control-card {
+  background: #ffffff;
+  padding: 12px 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #1e293b;
+}
+
+/* 1. ESTILO DO CAMPO DE BUSCA DE BAIRROS */
+.search-box {
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.search-box input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+/* Lista Autocomplete */
+.autocomplete-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  max-height: 180px;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1001;
+}
+
+.autocomplete-item {
+  padding: 8px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.autocomplete-item:hover {
+  background-color: #f8fafc;
+  color: #2563eb;
+  font-weight: bold;
+}
+
+/* 2. ESTILO DOS FILTROS DE PONTOS DE APOIO */
+.filter-title, .legend-title {
+  font-weight: bold;
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: #0f172a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.filter-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* 3. ESTILO DA LEGENDA DO MAPA */
+.legend-items {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-color {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.legend-line {
+  width: 20px;
+  height: 0;
+  border-top: 3px dashed;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.busca-e-filtros-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.barra-pesquisa-bairro {
+  position: relative;
+  width: 100%;
+}
+
+.barra-pesquisa-bairro input {
+  width: 100%;
+  padding: 12px 40px 12px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--cor-borda);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+  background-color: rgba(255,255,255,0.7);
+  box-shadow: var(--sombra);
+  margin-top: 10px;
+
+}
+
+.barra-pesquisa-bairro input:focus {
+  border-color: #007bff;
+}
+
+.btn-limpar-busca {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #888;
+}
+
+/* FUNDO E TEXTO DOS CARDS/POP-UPS DO MAPA NO MODO CLARO */
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background-color: #ffffff !important; /* Fundo branco do card */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* TÍTULO DO BAIRRO DENTRO DO CARD DO MAPA */
+.leaflet-popup-content h3,
+.leaflet-popup-content h4,
+.popup-risco h3 {
+  color: #0f172a !important; /* Cor escura legível para o título */
+  font-weight: 700;
+}
+
+/* TEXTO GERAL E ESPECIFICAÇÕES DENTRO DO CARD DO MAPA */
+.leaflet-popup-content,
+.leaflet-popup-content p,
+.leaflet-popup-content span,
+.popup-risco p,
+.popup-risco span {
+  color: #334155 !important; /* Cor escura para o corpo do texto */
+}
+
+/* BOTÃO OU ÍCONE DE FECHAR O POP-UP */
+.leaflet-container a.leaflet-popup-close-button {
+  color: #64748b !important;
+}
+
+/* TEXTO DE EMERGÊNCIA/SOS APENAS NO CARD DO MAPA */
+.leaflet-popup-content a[href="#sos-emergencia"],
+.leaflet-popup-content .btn-sos,
+.leaflet-popup-content .sos-link,
+.popup-risco a[href="#sos-emergencia"],
+.popup-risco .sos-link {
+  color: #dc2626 !important; /* Vermelho apenas no balão do mapa */
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.leaflet-popup-content a[href="#sos-emergencia"]:hover {
+  color: #991b1b !important;
+}
+
+/* CONTEÚDO/VALORES DO PONTO DE APOIO E STATUS DE RISCO NO MODO CLARO */
+.leaflet-popup-content p,
+.leaflet-popup-content div,
+.popup-risco p,
+.popup-risco div,
+.autocomplete-item p,
+.info-bairro-especificacoes p,
+.info-bairro-especificacoes div {
+  color: #1e293b !important; /* Cor cinza-escuro/preto bem legível */
+}
+
+/* CASO O NOME DO PONTO DE APOIO (EX: CEU CONTINENTAL) ESTEJA EM SPAN OU ELEMENTO DE DESTAQUE */
+.leaflet-popup-content .ponto-apoio,
+.popup-risco .ponto-apoio,
+.leaflet-popup-content span,
+.popup-risco span {
+  color: #0f172a !important; /* Texto escuro de alto contraste */
+}
+
+/* 1. TEXTO DOS BOTÕES DE FILTRO POR RISCO (ESTADO PADRÃO/NÃO SELECIONADO) */
+.btn-filtro {
+  color: #0f172a !important; /* Texto preto/escuro legível */
+  border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+/* 2. MANTÉM O TEXTO BRANCO APENAS QUANDO O BOTÃO ESTIVER ATIVO OU COM MOUSE POR CIMA */
+.btn-filtro.active,
+.btn-filtro:hover {
+  color: #ffffff !important;
+}
+
+/* 3. TEXTO PLACEHOLDER DA BARRA DE PESQUISA (ANTES DE DIGITAR ALGO) */
+#input-busca-bairro::placeholder,
+.barra-pesquisa-bairro input::placeholder {
+  color: #64748b !important; /* Cinza-escuro legível em fundo claro */
+  opacity: 1 !important; /* Garante visibilidade no Firefox */
+}
+
+/* TEXTO DIGITADO PELO USUÁRIO NA PESQUISA */
+#input-busca-bairro,
+.barra-pesquisa-bairro input {
+  color: #0f172a !important; /* Texto preto para o que o usuário digita */
+}
+
+/* 1. Remove a borda de todos os botões de filtro */
+.btn-filtro {
+  border: none !important;
+}
+
+/* 2. Apenas o botão "Todos" ativo ou com hover ganha o tom #38bdf8 */
+.btn-filtro:first-child.active,
+.btn-filtro:first-child:hover,
+.btn-filtro[onclick*="todos"].active,
+.btn-filtro[onclick*="todos"]:hover {
+  background-color: #38bdf8 !important;
+  color: #0f172a !important;
+  font-weight: 600;
+}
+
+/* Altera o placeholder dos inputs e do textarea dentro da seção de contato */
+#contato input::placeholder,
+#contato textarea::placeholder {
+  color: #64748b !important; /* Cinza-escuro legível em fundo claro */
+  opacity: 1 !important; /* Garante visibilidade no Firefox */
+}
