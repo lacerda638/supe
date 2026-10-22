@@ -17,10 +17,10 @@ let dadosClimaReal = null; // Guarda cache da API
 // ==========================
 const mapa = L.map("mapa-guarulhos").setView([-23.4543, -46.5333], 11);
 
-// Camada Base Limpa e Minimalista (CartoDB Light - Sem chave necessária)
-L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+// Camada Base Oficial do OpenStreetMap (100% Gratuita, detalhada e sem restrição de chave)
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
-  attribution: "&copy; OpenStreetMap contributors &copy; CARTO"
+  attribution: "&copy; OpenStreetMap contributors"
 }).addTo(mapa);
 
 // Grupos de Marcadores e Heatmap
