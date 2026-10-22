@@ -17,14 +17,10 @@ let dadosClimaReal = null; // Guarda cache da API
 // ==========================
 const mapa = L.map("mapa-guarulhos").setView([-23.4543, -46.5333], 11);
 
-// Camada Base (CartoDB Light)
+// Camada Base Limpa e Minimalista (CartoDB Light - Sem chave necessária)
 L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-  attribution: "&copy; OpenStreetMap & CARTO"
-}).addTo(mapa);
-
-// Camada Radar de Chuva OpenWeather
-L.tileLayer(`https://tile.openweathermap.org/map/precipitation_new/{z}/{x}/{y}.png?appid=${apiKey}`, {
-  opacity: 0.45
+  maxZoom: 19,
+  attribution: "&copy; OpenStreetMap contributors &copy; CARTO"
 }).addTo(mapa);
 
 // Grupos de Marcadores e Heatmap
@@ -735,7 +731,6 @@ function selecionarBairro(bairro) {
     }
   });
 
-  // Correção da variável 'map' para 'mapa'
   mapa.flyTo(bairro.coords, 14, {
     duration: 1.5
   });
@@ -783,9 +778,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const iconeTema = document.getElementById('icone-tema');
   const linkTema = document.getElementById('tema-css');
 
-  // Nome dos arquivos CSS que você possui
   const ARCHIVO_MODO_ESCURO = 'style_2.css'; 
-  const ARCHIVO_MODO_CLARO = 'style_claro.css'; // Insira o nome exato do seu arquivo de modo claro
+  const ARCHIVO_MODO_CLARO = 'style_claro.css';
 
   function definirTema(tema) {
     if (tema === 'claro') {
@@ -797,7 +791,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Recupera a preferência do usuário ou define padrão como escuro
   const temaSalvo = localStorage.getItem('tema_supe') || 'escuro';
   definirTema(temaSalvo);
 
